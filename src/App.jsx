@@ -1,29 +1,13 @@
-import { useEffect, useState } from "react"
+import Header from "./Components/Header";
 
-export default function App(){
-
-  const[count, setCount] = useState(0);
-  const[start,setStart] = useState(false);
-
-  const handleClick = ()=>{
-    setStart(true);
-  }
-
-  useEffect(()=>{
-
-if(!start) return;
-
-    const timer = setInterval(()=>{
-      setCount(count => count+1);
-    },1000)
-
-    return ()=> clearInterval(timer);
-  },[start])
-
-  return(
+export default function App() {
+  return (
     <>
-    <h1>Count {count} </h1>
-    <button onClick={handleClick}>Click me</button>
+      <h1>Day 3</h1>
+      <Header 
+      name="John Doe" age={30} adress="123 Main Street" />
+      <Header
+      name="Jane Smith" age={25} adress="456 Elm Street" />
     </>
-  )
+  );
 }
