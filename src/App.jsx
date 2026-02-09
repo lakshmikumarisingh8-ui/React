@@ -1,26 +1,18 @@
-import { useState } from "react"
-
 export default function App(){
 
-  const[show, setShow] = useState(false);
-
-  const handleclick = ()=>{
-    setShow(!show);
-  }
-
+  const btn = [1,2,3,4,5,6,7,8,9,10];
+  const item = ["apple","mango","guava","litchii","banana","grapes","orange","papaya","kiwi","watermelon"];
   return(
     <>
-    <h1>Hello</h1>
-
-    <button onClick={handleclick}>Submit</button>
-
-    {show && (
-      <>
-      <h1>Hello guys</h1>
-       <p>thank you for submitting this form</p>
-      </>
-    )}
-    
+  <h1>Day6</h1>
+  {btn.map((button,index)=>(
+    <button key={index}>{button}</button>
+  ))}
+  <ul>
+    {item.map((fruits,index)=>(
+      <li key={index}>{fruits}</li>
+    ))}
+  </ul>
     </>
   )
 }
