@@ -1,13 +1,26 @@
-import Header from "./Components/Header";
+import { useState } from "react"
 
-export default function App() {
-  return (
+export default function App(){
+
+  const[show, setShow] = useState(false);
+
+  const handleclick = ()=>{
+    setShow(!show);
+  }
+
+  return(
     <>
-      <h1>Day 3</h1>
-      <Header 
-      name="John Doe" age={30} adress="123 Main Street" />
-      <Header
-      name="Jane Smith" age={25} adress="456 Elm Street" />
+    <h1>Hello</h1>
+
+    <button onClick={handleclick}>Submit</button>
+
+    {show && (
+      <>
+      <h1>Hello guys</h1>
+       <p>thank you for submitting this form</p>
+      </>
+    )}
+    
     </>
-  );
+  )
 }
