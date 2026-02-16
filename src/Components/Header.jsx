@@ -1,7 +1,17 @@
-export default function Header(props){
+export default function Header(){
     return(
-        <header>
-            <h1 className="para1">Hello guys Welcome to the best cafe!!!</h1>
-        </header>
+        <>
+            <ul>
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/about">About</a>
+                </li>
+                <li>
+                    <a href="/contact">Contact</a>
+                </li>
+            </ul>
+        </>
     )
 }
